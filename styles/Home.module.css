@@ -80,6 +80,15 @@
   margin-top: 3rem;
 }
 
+.gridTable{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  line-height: 1.5em;
+  border: 1px solid #e6e7e8;
+  padding: 0.75rem;
+  grid-gap: 50px;
+}
+
 .card {
   margin: 1rem;
   flex-basis: 45%;
