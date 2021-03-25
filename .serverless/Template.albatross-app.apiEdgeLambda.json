@@ -1,0 +1,17 @@
+{
+  "name": "jh76ug3-t3j5zyu",
+  "hash": "rCiSPMx6aQ/juIAietvcxmChBOFjf3n2lpxrygKjoXY=",
+  "description": "API Lambda@Edge for Next CloudFront distribution",
+  "memory": 512,
+  "timeout": 10,
+  "code": "/Users/alanking/github/albatross/.serverless_nextjs/api-lambda",
+  "shims": [],
+  "handler": "index.handler",
+  "runtime": "nodejs12.x",
+  "env": {},
+  "role": {
+    "arn": "arn:aws:iam::852276056287:role/jh76ug3-5hhx1z"
+  },
+  "arn": "arn:aws:lambda:us-east-1:852276056287:function:jh76ug3-t3j5zyu",
+  "region": "us-east-1"
+}
