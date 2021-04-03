@@ -2,5 +2,5 @@ service: albatross
 albatross-app:
   component: "@sls-next/serverless-component" 
   inputs:
-    domain: ["www","therosteradvisor.com"]
+    domain: ["golf","therosteradvisor.com"]
 org: alankingmn

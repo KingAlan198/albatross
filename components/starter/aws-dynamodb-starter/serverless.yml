@@ -1,0 +1,14 @@
+app: albatross-db
+name: warba-golf
+component: aws-dynamodb
+
+inputs:
+  deletionPolicy: delete # allows table to be removed. This property is a safe guard.
+  name: warba-golf
+  attributeDefinitions:
+    - AttributeName: id
+      AttributeType: S
+  keySchema:
+    - AttributeName: id
+      KeyType: HASH
+  region: us-east-1

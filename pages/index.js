@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import React from 'react'
 import styles from '../styles/Home.module.css'
+import Link from 'next/link'
 
 export default function Home(data) {
 
@@ -34,15 +35,22 @@ export default function Home(data) {
         )
          )}
         </div>
+        <Link href="/subpages/teams">
+          <a>Teams</a>
+        </Link>        
       </main>
     </div>
   )
 }
 
-export async function getServerSideProps(context) {
+export const getServerSideProps = async () => {
+  const res = await fetch('https://golf.therosteradvisor.com/api/hello')
+  const data = await res.json()
+
+  console.log("this is it", JSON.stringify(data))
   return {
     props: {
-      data: [{"name": "team 1", "score":"100"},{"name": "team 2", "score":"120"},{"name": "team 3", "score":"60"}]
-    }
+      data,
+    },
   }
 }
