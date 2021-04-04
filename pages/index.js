@@ -27,7 +27,8 @@ export default function Home(data) {
         <div className={styles.gridTable}>
           <div>Team</div>
           <div>Score</div>
-        {data && data.data.map(({name, score}) =>  (
+        {console.log("d",JSON.stringify(data.data))} 
+        {data && data.data && data.data.data.map(({name, score}) =>  (
           <>
           <div>{name}</div>
           <div>{score}</div>
@@ -44,10 +45,10 @@ export default function Home(data) {
 }
 
 export const getServerSideProps = async () => {
-  const res = await fetch('https://golf.therosteradvisor.com/api/hello')
+  const res = await fetch('http://localhost:3000/api/hello')
   const data = await res.json()
 
-  console.log("this is it", JSON.stringify(data))
+  console.log("this is it", data)
   return {
     props: {
       data,

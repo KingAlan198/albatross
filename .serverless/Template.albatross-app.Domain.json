@@ -4,7 +4,7 @@
   "domain": "therosteradvisor.com",
   "subdomains": [
     {
-      "domain": "www.therosteradvisor.com",
+      "domain": "golf.therosteradvisor.com",
       "distributionId": "E3JF7COY244RKQ",
       "url": "https://dvz7md5wl3iyg.cloudfront.net",
       "type": "awsCloudFront"
