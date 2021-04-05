@@ -45,9 +45,10 @@ export default function Home(data) {
 }
 
 export const getServerSideProps = async () => {
-  const basePath=process.env.basePath
-  console.log("basePath", basePath)
-  const res = await fetch(`${basePath}api/hello`)
+  console.log("calling api")
+  const url=`${process.env.basePath}api/hello`
+  console.log("url", url)
+  const res = await fetch(url)
   const data = await res.json()
 
   console.log("this is it", data)

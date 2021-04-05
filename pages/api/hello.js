@@ -1,20 +1,15 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+import dynamoDb from '../../lib/dynamodbUtils';
 
-export default (req, res) => {
-  res.status(200).json({
-    "data": [
-      {
-        "name": "team 1",
-        "score": "100"
-      },
-      {
-        "name": "team 2",
-        "score": "120"
-      },
-      {
-        "name": "team 3",
-        "score": "60"
-      }
-    ]
+export default async function handler(req, res) {
+  console.log("url")
+  const { Item } = await dynamoDb.get({
+    Key: {
+      id: "23"
+    }
   })
+
+  console.log("item", JSON.stringify(Item.data))
+  const temp = JSON.parse(Item.data)
+  console.log("temp",temp)
+  res.status(200).json(temp)
 }
