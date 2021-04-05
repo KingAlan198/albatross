@@ -45,6 +45,8 @@ export default function Home(data) {
 }
 
 export const getServerSideProps = async () => {
+  const basePath=process.env.basePath
+  console.log("basePath", basePath)
   const res = await fetch('https://qgolf.therosteradvisor.com/api/hello')
   const data = await res.json()
 
