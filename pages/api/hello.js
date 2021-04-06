@@ -1,4 +1,4 @@
-import dynamoDb from '../../lib/dynamodbUtils';
+import dynamoDb from '../../utils/dynamodbUtils';
 
 export default async function handler(req, res) {
   console.log("url")
